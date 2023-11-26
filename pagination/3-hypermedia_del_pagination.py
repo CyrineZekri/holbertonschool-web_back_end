@@ -40,6 +40,7 @@ class Server:
         return self.__indexed_dataset
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
+        """module documentation"""
         indexed_dataset = self.indexed_dataset()
         assert (index is None or (0 <= index < len(indexed_dataset)))
         data_page = []
