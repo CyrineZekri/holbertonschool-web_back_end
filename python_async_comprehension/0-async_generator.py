@@ -2,10 +2,10 @@
 """module documentation"""
 import asyncio
 import random
-from typing import AsyncGenerator
+from typing import Generator, NoneType
 
 
-async def async_generator() -> AsyncGenerator[float, None]:
+def sync_generator() -> Generator[float, NoneType, NoneType]:
     """function definition"""
     for _ in range(10):
         await asyncio.sleep(1)
