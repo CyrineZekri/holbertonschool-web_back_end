@@ -1,6 +1,7 @@
-export function divideFunction(a, b) {
-  if (b === 0) {
-    throw new Error("Division by zero is not allowed.");
+export default function divideFunction(numerator, denominator) {
+  if (denominator === 0) {
+    throw new Error('cannot divide by 0');
   }
-  return a / b;
+
+  return numerator / denominator;
 }
