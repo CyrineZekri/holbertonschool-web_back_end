@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 0-main file"""
+""" 0-main file imported """
 BasicCache = __import__('0-basic_cache').BasicCache
 
 my_cache = BasicCache()
