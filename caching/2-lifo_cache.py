@@ -3,6 +3,7 @@
 """
 from base_caching import BaseCaching
 
+
 class LIFOCache(BaseCaching):
     """ LIFOCache class:
     """
@@ -22,7 +23,7 @@ class LIFOCache(BaseCaching):
                 self.order.remove(key)
             self.order.append(key)
             if len(self.cache_data) > BaseCaching.MAX_ITEMS:
-                last_key = self.order.pop(-2)  
+                last_key = self.order.pop(-2)
                 del self.cache_data[last_key]
                 print("DISCARD:", last_key)
 
