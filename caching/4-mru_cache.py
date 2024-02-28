@@ -3,6 +3,7 @@
 """
 from base_caching import BaseCaching
 
+
 class MRUCache(BaseCaching):
     """MRU Cache Class"""
 
@@ -19,12 +20,12 @@ class MRUCache(BaseCaching):
         if key in self.cache_data:
             self.cache_keys.remove(key)
         elif len(self.cache_data) >= BaseCaching.MAX_ITEMS:
-            mru_key = self.cache_keys.pop()  
+            mru_key = self.cache_keys.pop()
             del self.cache_data[mru_key]
             print(f"DISCARD: {mru_key}")
 
         self.cache_data[key] = item
-        self.cache_keys.append(key)  
+        self.cache_keys.append(key)
 
     def get(self, key):
         """Return the value linked to key"""
